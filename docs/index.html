@@ -3,68 +3,184 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DragonBuilds creates practical software for vehicle enthusiasts. Home of MyGarage.">
+  <meta name="description" content="DragonBuilds — apps, cars, woodworking, and other projects.">
   <meta name="theme-color" content="#050914">
-  <title>DragonBuilds — Home of MyGarage</title>
+  <title>DragonBuilds</title>
   <link rel="icon" type="image/png" href="assets/images/mygarage-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
 
+  <style>
+    .links-hero {
+      padding: clamp(4.5rem, 10vw, 8rem) 0 3rem;
+      text-align: center;
+    }
+
+    .links-hero h1 {
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .links-hero .lede {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-bottom: clamp(4rem, 9vw, 8rem);
+    }
+
+    .link-card {
+      display: flex;
+      min-height: 180px;
+      padding: 1.6rem;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(0, 126, 255, 0.14), transparent 17rem),
+        linear-gradient(155deg, rgba(25, 40, 71, 0.76), rgba(9, 17, 31, 0.9));
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+
+    .link-card:hover,
+    .link-card:focus-visible {
+      transform: translateY(-3px);
+      border-color: rgba(41, 162, 255, 0.7);
+    }
+
+    .link-card h2 {
+      margin: 0 0 .5rem;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .link-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .link-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .link-icon {
+      display: grid;
+      flex: 0 0 auto;
+      width: 52px;
+      height: 52px;
+      place-items: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, rgba(140,82,255,.30), rgba(0,126,255,.30));
+      font-size: 1.55rem;
+    }
+
+    .visit {
+      color: var(--blue-bright);
+      font-weight: 800;
+    }
+
+    .simple-nav {
+      display: flex;
+      align-items: center;
+      min-height: 72px;
+    }
+
+    .simple-nav .brand {
+      margin-right: auto;
+    }
+
+    .footer-grid {
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .link-card {
+        min-height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
 <header class="site-header">
-  <nav class="wrapper nav" aria-label="Primary navigation">
+  <nav class="wrapper simple-nav" aria-label="Primary navigation">
     <a class="brand" href="./">
-      <img src="assets/images/mygarage-icon.png" alt="">
       <span>DRAGONBUILDS</span>
     </a>
-    <div class="nav-links">
-      <a href="mygarage/" aria-current="page">MyGarage</a>
-      <a class="hide-mobile" href="mygarage/support.html" >Support</a>
-      <a class="hide-mobile" href="mygarage/privacy.html" >Privacy</a>
-    </div>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrapper hero-grid">
-      <div>
-        <p class="eyebrow">A DragonBuilds application</p>
-        <h1>Built for the cars you care about.</h1>
-        <p class="lede">DragonBuilds creates focused, practical tools for enthusiasts who want to document, maintain, and improve their vehicles.</p>
-        <div class="hero-actions">
-          <a class="button" href="mygarage/">Explore MyGarage</a>
-          <a class="button secondary" href="mygarage/support.html">Contact support</a>
-        </div>
-      </div>
-      <div class="hero-art">
-        <img src="assets/images/mygarage-wordmark.png" alt="MyGarage — Track. Maintain. Improve.">
-      </div>
+  <section class="links-hero">
+    <div class="wrapper">
+      <p class="eyebrow">DragonBuilds</p>
+      <h1>Things I build.</h1>
+      <p class="lede">Apps, cars, woodworking, and the other projects that keep finding their way into my garage.</p>
     </div>
   </section>
 
-  <section class="section band">
-    <div class="wrapper">
-      <div class="section-heading">
-        <p class="eyebrow">Featured application</p>
-        <h2>Everything about your garage, organized.</h2>
-        <p>MyGarage brings vehicle details, photos, service history, modifications, track times, notes, and reports together in one place.</p>
-      </div>
-      <div class="feature-showcase">
-        <div>
-          <div class="card">
-            <div class="icon">🏁</div>
-            <h3>MyGarage</h3>
-            <p>Track daily drivers, race cars, projects, and everything in between without forcing every vehicle into the same workflow.</p>
-            <a class="button" href="mygarage/">View the app</a>
+  <section class="wrapper">
+    <div class="link-grid">
+
+      <a class="link-card" href="mygarage/">
+        <div class="link-top">
+          <div class="link-icon">🚘</div>
+          <div>
+            <h2>MyGarage</h2>
+            <p>A vehicle-management app for tracking, maintaining, and improving the cars you care about.</p>
           </div>
         </div>
-        <div class="phone-row" aria-label="MyGarage app screenshots">
-          <div class="phone-shot"><img src="assets/images/garage-home.jpg" alt="MyGarage vehicle list"></div>
-          <div class="phone-shot"><img src="assets/images/vehicle-details.jpg" alt="MyGarage vehicle details"></div>
-          <div class="phone-shot"><img src="assets/images/track-times.jpg" alt="MyGarage track times"></div>
+        <span class="visit">Visit MyGarage →</span>
+      </a>
+
+      <a class="link-card" href="https://ko-fi.com/dragonbuilds" target="_blank" rel="noopener noreferrer">
+        <div class="link-top">
+          <div class="link-icon">🪵</div>
+          <div>
+            <h2>Ko-fi</h2>
+            <p>Woodworking projects, builds, and other things made by hand.</p>
+          </div>
         </div>
-      </div>
+        <span class="visit">Visit Ko-fi →</span>
+      </a>
+
+      <a class="link-card" href="https://www.instagram.com/dragonstang" target="_blank" rel="noopener noreferrer">
+        <div class="link-top">
+          <div class="link-icon">🏁</div>
+          <div>
+            <h2>Cars on Instagram</h2>
+            <p>Mustangs, car meets, racing, projects, and life around the garage.</p>
+          </div>
+        </div>
+        <span class="visit">@dragonstang →</span>
+      </a>
+
+      <a class="link-card" href="https://www.instagram.com/thedragonbuilds" target="_blank" rel="noopener noreferrer">
+        <div class="link-top">
+          <div class="link-icon">🛠️</div>
+          <div>
+            <h2>Other Builds on Instagram</h2>
+            <p>Woodworking, making, hobbies, and whatever project is happening next.</p>
+          </div>
+        </div>
+        <span class="visit">@thedragonbuilds →</span>
+      </a>
+
     </div>
   </section>
 </main>
@@ -73,7 +189,7 @@
   <div class="wrapper footer-grid">
     <div>
       <strong>DragonBuilds</strong><br>
-      <span class="small">Independent software for vehicle enthusiasts.</span>
+      <span class="small">Build it. Drive it. Make it yours.</span>
     </div>
     <div class="footer-links">
       <a href="mygarage/">MyGarage</a>
@@ -83,6 +199,5 @@
     <div class="small">© 2026 DragonBuilds</div>
   </div>
 </footer>
-
 </body>
 </html>
