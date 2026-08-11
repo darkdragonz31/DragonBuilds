@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Support and closed-beta feedback for MyGarage.">
+  <meta name="description" content="Support, bug reports, and beta feedback for MyGarage.">
   <meta name="theme-color" content="#050914">
   <title>MyGarage Support</title>
   <link rel="icon" type="image/png" href="../assets/images/mygarage-icon.png">
@@ -12,7 +12,10 @@
 <body>
 <header class="site-header">
   <nav class="wrapper nav" aria-label="Primary navigation">
-    <a class="brand" href="../"><img src="../assets/images/mygarage-icon.png" alt=""><span>DRAGONBUILDS</span></a>
+    <a class="brand" href="../">
+      <img src="../assets/images/mygarage-icon.png" alt="">
+      <span>DRAGONBUILDS</span>
+    </a>
     <div class="nav-links">
       <a href="./">MyGarage</a>
       <a href="beta.html">Join Beta</a>
@@ -21,49 +24,195 @@
     </div>
   </nav>
 </header>
-<main class="wrapper">
-  <header class="page-hero">
-    <p class="eyebrow">MyGarage</p>
-    <h1>Support & beta feedback</h1>
-    <p class="lede">Questions, bugs, and honest feedback are welcome. Your testing helps shape the first public release.</p>
-  </header>
-  <div class="prose">
-    <div class="contact-box">
-      <h2>Email support</h2>
-      <p><a href="mailto:mygarage.support@gmail.com">mygarage.support@gmail.com</a></p>
-      <p>Please include enough detail to reproduce the problem. Screenshots are especially helpful.</p>
+
+<main>
+  <section class="page-hero">
+    <div class="wrapper">
+      <p class="eyebrow">MyGarage</p>
+      <h1>Support & beta feedback</h1>
+      <p class="lede">Found a bug, got stuck, or have an idea? Send the details here so there’s enough information to actually investigate it.</p>
     </div>
-    <section>
-      <h2>What to include</h2>
-      <ul>
-        <li>The MyGarage app version shown on the About screen.</li>
-        <li>Your phone model and Android version.</li>
-        <li>What you were trying to do.</li>
-        <li>What happened instead, including any message shown.</li>
-        <li>Whether the issue happens every time or only sometimes.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Beta feedback</h2>
-      <p>Feedback does not need to be formal. Useful reports include confusing wording, a task that took too many taps, information that appeared in the wrong place, or a feature that did not behave the way you expected.</p>
-      <p>If you are not already enrolled, you can <a href="beta.html">join the MyGarage closed beta here</a>.</p>
-    </section>
-    <section>
-      <h2>Before sending app data</h2>
-      <p>Please avoid emailing sensitive personal information. Vehicle identification numbers, addresses, receipt details, and other private content may appear in screenshots or exports, so review attachments before sending them.</p>
-    </section>
-    <section>
-      <h2>Privacy</h2>
-      <p>For information about how MyGarage handles app data, read the <a href="privacy.html">MyGarage Privacy Policy</a>.</p>
-    </section>
-  </div>
+  </section>
+
+  <section class="section">
+    <div class="wrapper support-layout">
+      <div class="beta-panel">
+        <p class="eyebrow">Submit a request</p>
+        <h2>Tell me what happened.</h2>
+
+        <form id="support-form" class="support-form" action="https://formspree.io/f/xnpadwdg" method="POST">
+          <input type="hidden" name="_subject" value="New MyGarage support request">
+
+          <div class="honeypot" aria-hidden="true">
+            <label for="_gotcha">Leave this field empty</label>
+            <input id="_gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <label for="support-email">Email address *</label>
+            <input id="support-email" type="email" name="email" autocomplete="email" required>
+            <small>Used only so I can follow up about this request.</small>
+          </div>
+
+          <div class="form-row">
+            <label for="support-name">Name or nickname</label>
+            <input id="support-name" type="text" name="name" autocomplete="name">
+          </div>
+
+          <div class="form-row">
+            <label for="request-type">What kind of request is this? *</label>
+            <select id="request-type" name="request_type" required>
+              <option value="">Choose one…</option>
+              <option>Bug / Something isn't working</option>
+              <option>Question / Need help</option>
+              <option>Feature suggestion</option>
+              <option>Usability / Something is confusing</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="app-version">MyGarage version</label>
+            <input id="app-version" type="text" name="app_version" placeholder="Shown on the About screen">
+          </div>
+
+          <div class="form-row">
+            <label for="phone-model">Phone model</label>
+            <input id="phone-model" type="text" name="phone_model" placeholder="Example: Pixel 9 Pro, Galaxy S24">
+          </div>
+
+          <div class="form-row">
+            <label for="android-version">Android version</label>
+            <input id="android-version" type="text" name="android_version" placeholder="Example: Android 16">
+          </div>
+
+          <div class="form-row">
+            <label for="trying">What were you trying to do? *</label>
+            <textarea id="trying" name="what_i_was_trying_to_do" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="happened">What happened instead? *</label>
+            <textarea id="happened" name="what_happened" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="expected">What did you expect to happen?</label>
+            <textarea id="expected" name="expected_behavior"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="reproduce">Can you reproduce the issue?</label>
+            <select id="reproduce" name="reproducible">
+              <option value="">Not sure / Not applicable</option>
+              <option>Yes, every time</option>
+              <option>Sometimes</option>
+              <option>No, only happened once</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="notes">Anything else that might help?</label>
+            <textarea id="notes" name="additional_notes" placeholder="Steps you tried, unusual circumstances, related records, etc."></textarea>
+          </div>
+
+          <button class="button" type="submit">Submit Support Request</button>
+
+          <p class="form-note small">
+            Before submitting, check your description for VINs, addresses, receipt details, or other private information you don't want to send.
+            Support submissions are processed through Formspree. See the <a href="privacy.html">Privacy Policy</a>.
+          </p>
+
+          <div id="support-status" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <aside class="support-side">
+        <div class="support-tip">
+          <h3>📷 Need to send a screenshot?</h3>
+          <p>Submit the form first, then email the screenshot to <a href="mailto:mygarage.support@gmail.com">mygarage.support@gmail.com</a> from the same email address so I can match it to your request.</p>
+        </div>
+
+        <div class="support-tip">
+          <h3>✉️ Prefer regular email?</h3>
+          <p>You can always contact MyGarage support directly at:</p>
+          <p><a href="mailto:mygarage.support@gmail.com"><strong>mygarage.support@gmail.com</strong></a></p>
+        </div>
+
+        <div class="support-tip">
+          <h3>Useful details</h3>
+          <ul>
+            <li>The app version from the About screen</li>
+            <li>Your phone model and Android version</li>
+            <li>The steps that led to the problem</li>
+            <li>Whether it happens every time</li>
+            <li>The exact wording of any error message</li>
+          </ul>
+        </div>
+
+        <div class="support-tip">
+          <h3>Want to test MyGarage?</h3>
+          <p>If you're not already enrolled, you can <a href="beta.html"><strong>join the closed beta here</strong></a>.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
 </main>
+
 <footer>
   <div class="wrapper footer-grid">
-    <div><strong>DragonBuilds</strong><br><span class="small">Independent software for vehicle enthusiasts.</span></div>
-    <div class="footer-links"><a href="./">MyGarage</a><a href="beta.html">Join Beta</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></div>
+    <div>
+      <strong>DragonBuilds</strong><br>
+      <span class="small">Independent software for vehicle enthusiasts.</span>
+    </div>
+    <div class="footer-links">
+      <a href="./">MyGarage</a>
+      <a href="beta.html">Join Beta</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
     <div class="small">© 2026 DragonBuilds</div>
   </div>
 </footer>
+
+<script>
+  const supportForm = document.getElementById('support-form');
+  const supportStatus = document.getElementById('support-status');
+
+  supportForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const submitButton = supportForm.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting…';
+    supportStatus.classList.remove('show');
+    supportStatus.textContent = '';
+
+    try {
+      const response = await fetch(supportForm.action, {
+        method: 'POST',
+        body: new FormData(supportForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        supportForm.reset();
+        supportStatus.textContent = 'Support request received. Thanks — I’ll review it and follow up at the email address you provided if needed.';
+        supportStatus.classList.add('show');
+      } else {
+        supportStatus.textContent = 'The request could not be submitted right now. Please try again, or email mygarage.support@gmail.com.';
+        supportStatus.classList.add('show');
+      }
+    } catch (error) {
+      supportStatus.textContent = 'The request could not be submitted right now. Please try again, or email mygarage.support@gmail.com.';
+      supportStatus.classList.add('show');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
+  });
+</script>
 </body>
 </html>
