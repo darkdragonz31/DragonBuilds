@@ -261,126 +261,33 @@ p { color: var(--muted); }
 .youth-placeholder { border-color: rgba(255,119,188,.26); }
 .stacked-placeholder { min-height: 300px; align-self: end; }
 
-.programs-section { padding-top: 115px; padding-bottom: 125px; }
-.program-heading { margin-bottom: 55px; }
-
-.program-showcase {
-  display: grid;
-  grid-template-columns: .82fr 1.18fr;
-  gap: clamp(38px, 6vw, 78px);
-  align-items: center;
+.programs-section {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.012), rgba(255,119,188,.022), rgba(85,226,210,.032), rgba(255,255,255,.012));
 }
 
-.program-copy {
-  padding: 30px 0;
-}
-
-.program-kicker {
-  margin: 0 0 12px;
-  color: var(--pink);
-  font-family: "Outfit", sans-serif;
-  font-size: .72rem;
-  font-weight: 900;
-  letter-spacing: .12em;
-}
-
-.program-copy h3 {
-  margin-bottom: 14px;
-  font-size: clamp(1.65rem, 3vw, 2.2rem);
-}
-
-.program-copy > p:not(.program-kicker) {
-  margin-bottom: 28px;
-  color: var(--muted);
-}
-
-.program-list {
-  display: grid;
-  gap: 10px;
-}
-
-.program-list article {
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 13px;
-  padding: 15px 16px;
-  border-radius: 15px;
-  border: 1px solid rgba(255,255,255,.065);
-  background: rgba(255,255,255,.022);
-}
-
-.program-list article > span {
-  padding-top: 2px;
-  font-family: "Outfit", sans-serif;
-  color: var(--pink);
-  font-weight: 900;
-  font-size: .76rem;
-}
-
-.program-list strong {
-  font-size: .94rem;
-}
-
-.program-list p {
-  margin: 3px 0 0;
-  font-size: .82rem;
-  line-height: 1.45;
-}
-
-.program-phones {
-  position: relative;
-  min-height: 650px;
-}
-
-.program-phone {
-  position: absolute;
+.program-screens .phone {
   overflow: hidden;
-  z-index: 2;
 }
 
-.program-phone-main {
-  width: min(310px, 48%);
-  left: 4%;
-  top: 2%;
-  transform: rotate(-4deg);
-}
-
-.program-phone-list {
-  width: min(275px, 43%);
-  right: 3%;
-  bottom: 1%;
-  transform: rotate(5deg);
-  z-index: 3;
-}
-
-.program-app-shot {
+.program-screens .app-shot {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
-  border-radius: 28px;
+  object-position: top center;
+  border-radius: 24px;
 }
 
-.program-glow {
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  filter: blur(75px);
-  opacity: .16;
-  pointer-events: none;
+.program-screens .phone-left {
+  left: 8%;
+  top: 5%;
+  transform: rotate(-5deg);
 }
 
-.program-glow-a {
-  left: 4%;
-  top: 18%;
-  background: var(--aqua);
-}
-
-.program-glow-b {
-  right: 3%;
-  bottom: 8%;
-  background: var(--pink);
+.program-screens .phone-right {
+  right: 5%;
+  bottom: 2%;
+  transform: rotate(6deg);
 }
 
 .story-section { padding: 20px 0 100px; }
@@ -410,23 +317,12 @@ p { color: var(--muted); }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .insights-layout { gap: 35px; }
   .youth-visuals { max-width: 620px; width: 100%; margin: 0 auto; }
-  .program-showcase { grid-template-columns: 1fr; gap: 20px; }
-  .program-copy { max-width: 720px; margin: 0 auto; }
-  .program-list { grid-template-columns: repeat(2, 1fr); }
-  .program-phones { min-height: 620px; max-width: 640px; width: 100%; margin: 0 auto; }
   .story-card { grid-template-columns: 1fr; gap: 20px; }
   .site-footer { grid-template-columns: 1fr; text-align: center; }
   .footer-links { justify-content: center; }
 }
 
 @media (max-width: 700px) {
-  .program-heading { margin-bottom: 34px; }
-  .program-copy { padding-top: 0; }
-  .program-list { grid-template-columns: 1fr; }
-  .program-phones { min-height: 500px; margin-top: 6px; }
-  .program-phone-main { width: 54%; left: 1%; }
-  .program-phone-list { width: 49%; right: 0; bottom: 0; }
-
   .section-pad, .site-header, .site-footer { width: min(calc(100% - 28px), var(--max)); }
   .site-header { height: auto; padding: 18px 0; align-items: flex-start; gap: 18px; }
   .site-nav { gap: 13px; flex-wrap: wrap; justify-content: flex-end; }
@@ -437,7 +333,7 @@ p { color: var(--muted); }
   h2 { font-size: clamp(2.15rem, 10vw, 3.1rem); }
   .hero-visual { min-height: 575px; transform: scale(.9); margin: -20px -30px; }
   .mini-card { width: 180px; }
-  .compare-grid, .feature-grid, .program-list { grid-template-columns: 1fr; }
+  .compare-grid, .feature-grid { grid-template-columns: 1fr; }
   .feature-split, .insights-layout, .youth-grid { padding-top: 70px; padding-bottom: 70px; min-height: auto; }
   .duo-screens { min-height: 510px; transform: scale(.9); margin-top: -15px; }
   .phone-left { left: 0; }
