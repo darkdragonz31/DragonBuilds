@@ -176,54 +176,56 @@
             <p class="eyebrow plain">DRAGON’S INSIGHTS</p>
             <h2>Your history should do more than <span>sit there.</span></h2>
             <p>
-              Dragon’s Insights looks across your recorded history, surfaces the strongest recurring signals,
-              and lets you drill into why a finding earned attention.
+              Dragon’s Insights looks across your recorded history, surfaces the signals that keep repeating,
+              and lets you inspect the evidence behind a finding instead of treating every fluctuation like a new story.
             </p>
-            <div class="question-stack">
-              <div>Does this pattern repeat on certain days of the week?</div>
-              <div>What tends to happen after a particular meal or activity?</div>
-              <div>Is a short-term change part of a larger recurring rhythm?</div>
-              <div>Why did this finding surface in the first place?</div>
+            <div class="insight-points" aria-label="What Dragon’s Insights looks for">
+              <span>Recurring patterns</span>
+              <span>What happens next</span>
+              <span>Longer-term context</span>
+              <span>Evidence strength</span>
             </div>
           </div>
-          <div class="duo-screens insights-screens" aria-label="Dragon’s Rhythm Insights screens">
-            <div class="phone phone-secondary phone-left">
-              <img class="app-shot" src="images/insights-priority-summary.jpg" alt="Dragon’s Rhythm Insights priority overview showing the most relevant and worth-watching findings in Aqua Dark mode." />
-            </div>
-            <div class="phone phone-secondary phone-right">
-              <img class="app-shot" src="images/insights-detail.jpg" alt="Dragon’s Rhythm Insights detail screen showing why a finding surfaced and the grouped calculations supporting it." />
-            </div>
+          <div class="insights-visual" aria-label="Dragon’s Rhythm Insights screens">
+            <figure class="insights-panel insights-panel-overview">
+              <img src="images/insights-priority-summary.jpg" alt="Dragon’s Rhythm Insights priority overview showing the most relevant and worth-watching findings in Aqua Dark mode." />
+            </figure>
+            <figure class="insights-panel insights-panel-detail">
+              <img src="images/insights-detail.jpg" alt="Dragon’s Rhythm Insights detail screen showing why a finding surfaced and the grouped calculations supporting it." />
+            </figure>
           </div>
         </div>
       </section>
 
       <section class="coach-showcase section-pad">
-        <div class="section-heading center">
+        <div class="section-heading center coach-heading">
           <p class="eyebrow plain">COACHING WITHOUT THE COOKIE CUTTER</p>
           <h2>Same evidence. <span>Different delivery.</span></h2>
           <p>
-            Coach personalities don’t change the underlying Insights engine. They change the way the same findings are
-            framed—whether you want gentle encouragement, directness, or a more forceful push.
+            Coach Mode never changes the underlying findings. It changes how those findings are delivered—so the voice can
+            match the kind of motivation you actually respond to.
           </p>
         </div>
 
-        <div class="coach-row">
-          <div class="coach-persona"><div class="coach-avatar">L</div><strong>Lumi</strong><span>encouraging</span></div>
-          <div class="coach-persona"><div class="coach-avatar">S</div><strong>Sage</strong><span>measured</span></div>
-          <div class="coach-persona"><div class="coach-avatar">R</div><strong>Rook</strong><span>straightforward</span></div>
-          <div class="coach-persona"><div class="coach-avatar">B</div><strong>Blaze</strong><span>intense</span></div>
-          <div class="coach-persona youth"><div class="coach-avatar">R</div><strong>Rylan</strong><span>Cadet Coach</span></div>
+        <div class="coach-row coach-row-compact" aria-label="Coach personalities">
+          <div class="coach-persona"><div class="coach-avatar">L</div><div><strong>Lumi</strong><span>encouraging</span></div></div>
+          <div class="coach-persona"><div class="coach-avatar">S</div><div><strong>Sage</strong><span>measured</span></div></div>
+          <div class="coach-persona"><div class="coach-avatar">R</div><div><strong>Rook</strong><span>straightforward</span></div></div>
+          <div class="coach-persona"><div class="coach-avatar">B</div><div><strong>Blaze</strong><span>intense</span></div></div>
+          <div class="coach-persona youth"><div class="coach-avatar">R</div><div><strong>Rylan</strong><span>Cadet Coach</span></div></div>
         </div>
 
-        <div class="coach-screens" aria-label="Dragon’s Rhythm coach personality examples">
-          <div class="phone phone-secondary coach-phone coach-lumi">
-            <img class="app-shot" src="images/coach-lumi.jpg" alt="Lumi, the Angel coach, interpreting the same Insights findings with a more encouraging delivery." />
-          </div>
-          <div class="phone phone-secondary coach-phone coach-blaze">
-            <img class="app-shot" src="images/coach-blaze.jpg" alt="Blaze, the Drill Coach, interpreting the same Insights findings with a more intense delivery." />
-          </div>
+        <div class="coach-compare" aria-label="Same findings delivered by two different coaches">
+          <article class="coach-example coach-example-lumi">
+            <div class="coach-example-label"><strong>Lumi · Angel</strong><span>Encouraging</span></div>
+            <div class="coach-crop"><img src="images/coach-lumi.jpg" alt="Lumi interpreting the Aug 26–Sep 23 Insights range in an encouraging voice." /></div>
+          </article>
+          <article class="coach-example coach-example-blaze">
+            <div class="coach-example-label"><strong>Blaze · Drill Coach</strong><span>Intense</span></div>
+            <div class="coach-crop"><img src="images/coach-blaze.jpg" alt="Blaze interpreting the same Aug 26–Sep 23 Insights range in a more intense voice." /></div>
+          </article>
         </div>
-        <p class="coach-caption">Same recorded range. Two different voices.</p>
+        <p class="coach-caption">Same recorded range. Same underlying findings. Two very different voices.</p>
       </section>
 
       <section class="youth-section">
@@ -257,28 +259,27 @@
         </div>
       </section>
 
-      <section class="programs-section section-pad">
-        <div class="section-heading">
-          <p class="eyebrow plain">TRAINING THAT CAN ACTUALLY PROGRESS</p>
-          <h2>A program should know <span>what week you’re on.</span></h2>
-          <p>
-            Dragon’s Rhythm supports reusable activities and structured programs—including training plans whose instructions can evolve over multiple weeks.
-          </p>
-        </div>
-        <div class="program-layout">
-          <div class="program-visuals">
-            <div class="showcase-shot program-shot">
-              <img src="images/dragons-forge.jpg" alt="Dragon’s Forge program detail screen showing structured sessions, exercises, sets, and rep ranges." />
-            </div>
-            <div class="showcase-shot program-list-shot">
-              <img src="images/programs-list.jpg" alt="Dragon’s Rhythm Programs screen showing Dragon Trials and reusable program templates." />
+      <section class="feature-band programs-section">
+        <div class="section-pad feature-split">
+          <div class="feature-copy">
+            <p class="eyebrow plain">TRAINING THAT CAN ACTUALLY PROGRESS</p>
+            <h2>A program should know<br /><span>what week you’re on.</span></h2>
+            <p>
+              Dragon’s Rhythm keeps the structure with the program instead of making you rewrite the workout every week.
+              Built-in Dragon Trials and custom plans can carry their own schedule, generated sessions, reminders, history,
+              and exercise prescriptions that change as the plan progresses.
+            </p>
+            <div class="feature-pills" aria-label="Program features">
+              <span>Dragon Trials</span><span>Reusable templates</span><span>Progressive plans</span><span>Generated sessions</span><span>Reminders</span><span>History</span>
             </div>
           </div>
-          <div class="program-list">
-            <article><span>01</span><div><strong>Dragon’s Forge</strong><p>Upper-body focused training.</p></div></article>
-            <article><span>02</span><div><strong>Dragon’s Foundation</strong><p>Legs and lower-body strength.</p></div></article>
-            <article><span>03</span><div><strong>Dragon’s Heart</strong><p>Core-focused training.</p></div></article>
-            <article><span>04</span><div><strong>Custom progressive plans</strong><p>Multi-week progression for equipment, exercises, and goals that don’t stay static.</p></div></article>
+          <div class="duo-screens program-screens" aria-label="Dragon’s Rhythm program screens">
+            <div class="phone phone-secondary phone-left">
+              <img class="app-shot" src="images/dragons-forge.jpg" alt="Dragon’s Forge program detail screen showing structured sessions, exercises, sets, and rep ranges." />
+            </div>
+            <div class="phone phone-secondary phone-right">
+              <img class="app-shot" src="images/programs-list.jpg" alt="Dragon’s Rhythm Programs screen showing Dragon Trials and reusable program templates." />
+            </div>
           </div>
         </div>
       </section>
