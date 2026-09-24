@@ -286,80 +286,6 @@ p { color: var(--muted); }
 .footer-links a { text-decoration: none; color: var(--muted); }
 .footer-links a:hover { color: var(--aqua); }
 
-
-/* Real app screenshots */
-.app-shot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: inherit;
-}
-
-.phone .app-shot {
-  border-radius: 28px;
-}
-
-.phone-secondary .app-shot {
-  border-radius: 24px;
-}
-
-.showcase-shot {
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid rgba(125,247,232,.20);
-  background: #071318;
-  box-shadow: 0 30px 80px rgba(0,0,0,.26);
-}
-
-.showcase-shot img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.landscape-shot {
-  max-width: 660px;
-  justify-self: end;
-}
-
-.coach-shot {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.youth-stack {
-  display: grid;
-  gap: 16px;
-}
-
-.youth-program-shot, .youth-coach-shot {
-  max-height: 330px;
-}
-
-.youth-program-shot img, .youth-coach-shot img {
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.program-visuals {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 18px;
-  align-items: start;
-}
-
-.program-shot, .program-list-shot {
-  max-height: 560px;
-}
-
-.program-shot img, .program-list-shot img {
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
 @media (max-width: 980px) {
   .hero, .feature-split, .insights-layout, .youth-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 70px; gap: 10px; }
@@ -371,7 +297,6 @@ p { color: var(--muted); }
   .insights-layout { gap: 35px; }
   .youth-visuals { max-width: 620px; width: 100%; margin: 0 auto; }
   .program-layout { grid-template-columns: 1fr; }
-  .program-visuals { max-width: 760px; width: 100%; margin: 0 auto; }
   .program-list { grid-template-columns: repeat(2, 1fr); }
   .story-card { grid-template-columns: 1fr; gap: 20px; }
   .site-footer { grid-template-columns: 1fr; text-align: center; }
@@ -397,12 +322,44 @@ p { color: var(--muted); }
   .coach-row { grid-template-columns: repeat(2, 1fr); }
   .coach-persona:last-child { grid-column: 1 / -1; }
   .youth-visuals { grid-template-columns: 1fr; }
-  .youth-stack { grid-template-columns: 1fr 1fr; }
   .youth-visuals .phone { justify-self: center; }
   .status-card { flex-direction: column; align-items: flex-start; }
   .status-card .button { width: 100%; }
   .story-card { padding-top: 45px; padding-bottom: 45px; }
-  .program-visuals, .youth-stack { grid-template-columns: 1fr; }
-  .landscape-shot { justify-self: center; }
   .footer-links { flex-wrap: wrap; }
+}
+
+
+/* Privacy policy */
+.privacy-main { padding-bottom: 80px; }
+.privacy-hero { padding-top: 86px; padding-bottom: 54px; max-width: 920px; margin-left: auto; margin-right: auto; }
+.privacy-hero h1 { margin: 12px 0 20px; font-size: clamp(3.2rem, 7vw, 5.7rem); }
+.privacy-summary { max-width: 830px; font-size: 1.14rem; }
+.policy-date { margin-top: 22px; color: var(--muted-2); font-size: .9rem; }
+.privacy-layout { display: grid; grid-template-columns: 220px minmax(0, 760px); gap: 64px; align-items: start; justify-content: center; }
+.privacy-toc { position: sticky; top: 26px; display: grid; gap: 8px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius-md); background: rgba(11,28,33,.72); }
+.privacy-toc strong { margin-bottom: 5px; font-family: "Outfit", sans-serif; }
+.privacy-toc a { color: var(--muted); text-decoration: none; font-size: .83rem; line-height: 1.35; }
+.privacy-toc a:hover { color: var(--aqua-bright); }
+.privacy-copy { min-width: 0; }
+.policy-section { scroll-margin-top: 24px; padding: 0 0 38px; margin-bottom: 38px; border-bottom: 1px solid rgba(255,255,255,.055); }
+.policy-section:last-child { border-bottom: 0; margin-bottom: 0; }
+.policy-section h2 { margin-bottom: 16px; font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.policy-section p { margin: 0 0 14px; }
+.policy-section a { color: var(--aqua-bright); }
+.privacy-callout { display: grid; gap: 5px; margin-top: 24px; padding: 19px 21px; border: 1px solid rgba(85,226,210,.22); border-radius: 16px; background: linear-gradient(135deg, rgba(85,226,210,.075), rgba(255,119,188,.025)); }
+.privacy-callout strong { font-family: "Outfit", sans-serif; color: var(--aqua-bright); }
+.privacy-callout span { color: var(--muted); }
+
+@media (max-width: 850px) {
+  .privacy-layout { grid-template-columns: 1fr; gap: 28px; }
+  .privacy-toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .privacy-toc strong { grid-column: 1 / -1; }
+}
+
+@media (max-width: 520px) {
+  .privacy-hero { padding-top: 58px; }
+  .privacy-layout { width: min(calc(100% - 28px), var(--max)); }
+  .privacy-toc { grid-template-columns: 1fr; }
+  .privacy-toc strong { grid-column: auto; }
 }
