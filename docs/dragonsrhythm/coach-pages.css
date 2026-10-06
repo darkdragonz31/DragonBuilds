@@ -1,0 +1,17 @@
+/* Coach artwork is limited to signup and support. */
+.coach-intro { display: grid; grid-template-columns: minmax(0, 1fr) 260px; align-items: center; gap: 54px; padding-top: 42px; padding-bottom: 36px; }
+.coach-intro-copy { min-width: 0; }
+.coach-intro h1 { font-size: clamp(2.5rem, 4.8vw, 4.2rem); }
+.page-coach { margin: 0; text-align: center; }
+.page-coach img { display: block; width: 100%; max-height: 310px; height: auto; object-fit: contain; }
+.page-coach figcaption { color: var(--muted); font-size: .75rem; margin-top: 10px; }
+@media (max-width: 850px) {
+ .coach-intro { grid-template-columns: minmax(0, 1fr) 185px; gap: 22px; }
+ .page-coach figcaption { font-size: .68rem; }
+}
+@media (max-width: 600px) {
+ .coach-intro { grid-template-columns: 1fr; gap: 14px; padding-top: 30px; padding-bottom: 24px; }
+ .page-coach { display: flex; align-items: center; justify-content: center; gap: 12px; }
+ .page-coach img { width: 98px; height: 124px; flex-shrink: 0; }
+ .page-coach figcaption { max-width: 135px; text-align: left; font-size: .8rem; margin: 0; }
+}

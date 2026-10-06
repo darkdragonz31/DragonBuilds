@@ -45,3 +45,7 @@ October 6 layout correction:
 Upload the HTML files AND dragonsrhythm.css together.
 
 Founder section update: added images/lisa-and-dragon.png (text removed, transparent background), updated index.html and dragonsrhythm.css, and bumped the stylesheet reference in all four Dragon's Rhythm HTML pages.
+
+Beta copy update: simplified testing expectations and added the free Full-version launch offer for all beta testers who participate and give feedback. Pricing FAQ starts expanded so the offer is visible. Sage artwork is pending; no substitute character or placeholder was added.
+
+Coach artwork update: Sage on beta.html and Lumi on support.html, using original supplied PNGs. Added coach-pages.css, images/sage-signup.png and images/lumi-support.png. Index and privacy unchanged. Beta effort and free Full-version offer remain intact.
