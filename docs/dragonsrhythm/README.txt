@@ -18,7 +18,7 @@ DEDICATED FORM DESTINATIONS
 Beta: https://formspree.io/f/xvkzoeqk
 Support: https://formspree.io/f/mbgdjnkk
 Both endpoints were supplied specifically for Dragon's Rhythm. Neither uses a MyGarage form. Submissions identify Dragon's Rhythm in the app field and subject.
-The support page is docs/dragonsrhythm/support.html, with support.js providing submission feedback and retry handling. Navigation and the beta FAQ link to it. The public support email remains the existing DragonBuilds inbox because no new email address was supplied.
+The support page is docs/dragonsrhythm/support.html, with support.js providing submission feedback and retry handling. Navigation and the beta FAQ link to it. The public support email is dragonsrhythm.support@gmail.com, the dedicated Dragon’s Rhythm inbox.
 
 BEFORE ANNOUNCING
 1. Open https://dragonbuilds.com/dragonsrhythm/beta.html after uploading and submit one real signup with your own email. Submit one support request too, and confirm delivery to their separate forms. Automated local checks use simulated responses; no live test signup was sent.

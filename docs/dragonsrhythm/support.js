@@ -29,8 +29,8 @@
     } catch (error) {
       status.classList.add('error');
       status.textContent = error.name === 'AbortError'
-        ? 'We could not confirm your request. It may have reached us. Please email mygarage.support@gmail.com with “Dragon’s Rhythm support” to check, or try again.'
-        : 'We could not confirm your request. Please try again, or email mygarage.support@gmail.com with “Dragon’s Rhythm support” in the subject. Your entries are still here.';
+        ? 'We could not confirm your request. It may have reached us. Please email dragonsrhythm.support@gmail.com with “Dragon’s Rhythm support” to check, or try again.'
+        : 'We could not confirm your request. Please try again, or email dragonsrhythm.support@gmail.com with “Dragon’s Rhythm support” in the subject. Your entries are still here.';
       sending = false;
       button.disabled = false;
       button.textContent = 'Try sending again';
