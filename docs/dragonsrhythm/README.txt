@@ -43,3 +43,5 @@ October 6 layout correction:
 - Benefits section retains its three styled cards; all Dragon's Rhythm pages now use a versioned stylesheet URL to avoid stale cached CSS.
 - Youth Mode screenshots now use three matching phone frames in a balanced composition with captions, with constrained image heights on desktop and mobile.
 Upload the HTML files AND dragonsrhythm.css together.
+
+Founder section update: added images/lisa-and-dragon.png (text removed, transparent background), updated index.html and dragonsrhythm.css, and bumped the stylesheet reference in all four Dragon's Rhythm HTML pages.

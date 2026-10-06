@@ -572,3 +572,15 @@ p { color: var(--muted); }
   .youth-device .app-shot { inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); border-radius: 12px; }
   .youth-device figcaption { font-size: .6rem; margin-top: 10px; }
 }
+
+/* Personal founder story */
+.story-card { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 64px; }
+.founder-art { position: relative; width: 100%; max-width: 440px; margin: 0 auto; }
+.founder-art::before { content: ""; position: absolute; inset: 18% 0 8%; background: radial-gradient(ellipse, rgba(255,119,188,.08), transparent 70%); z-index: -1; }
+.founder-art img { width: 100%; height: auto; display: block; }
+.story-copy h2 { font-size: clamp(1.9rem, 3.2vw, 2.75rem); line-height: 1.16; margin: 12px 0 26px; }
+.story-copy .eyebrow { color: var(--aqua-bright); }
+@media (max-width: 700px) {
+  .story-card { grid-template-columns: 1fr; gap: 32px; }
+  .founder-art { max-width: 320px; }
+}
