@@ -1,5 +1,7 @@
 Dragon's Rhythm beta website update — October 5, 2026
 
+Upload the updated docs folder into the existing DragonBuilds repository and publish through the existing GitHub Pages workflow. No npm install, build step, or new hosting provider is needed.
+
 Updated files:
 - docs/index.html (Dragon's Rhythm card and clearly named beta links)
 - docs/dragonsrhythm/index.html (beta landing page and social metadata)
@@ -36,3 +38,8 @@ https://dragonbuilds.com/dragonsrhythm/beta.html
 https://dragonbuilds.com/dragonsrhythm/privacy.html
 
 https://dragonbuilds.com/dragonsrhythm/support.html
+
+October 6 layout correction:
+- Benefits section retains its three styled cards; all Dragon's Rhythm pages now use a versioned stylesheet URL to avoid stale cached CSS.
+- Youth Mode screenshots now use three matching phone frames in a balanced composition with captions, with constrained image heights on desktop and mobile.
+Upload the HTML files AND dragonsrhythm.css together.

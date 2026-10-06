@@ -550,3 +550,25 @@ p { color: var(--muted); }
 
 .form-row textarea { resize: vertical; min-height: 160px; }
 .form-row select { color-scheme: dark; }
+
+/* Unified Youth Mode screenshot composition. Version: 20261006-layout. */
+.youth-grid { gap: 36px; grid-template-columns: .95fr 1.05fr; }
+.youth-visuals { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; align-items: center; width: 100%; max-width: 620px; margin: 0 auto; padding: 36px 8px; isolation: isolate; }
+.youth-visuals::before { content: ""; position: absolute; inset: 12% -2%; border-radius: 50%; background: radial-gradient(ellipse, rgba(85,226,210,.13), transparent 70%); z-index: -1; }
+.youth-device { min-width: 0; margin: 0; position: relative; }
+.youth-device .phone { width: 100%; height: auto; aspect-ratio: 9 / 19.4; padding: 7px; border-radius: 25px; transform: none; overflow: hidden; }
+.youth-device .app-shot { position: absolute; inset: 7px; width: calc(100% - 14px); height: calc(100% - 14px); border-radius: 18px; object-fit: cover; object-position: top center; }
+.youth-device-program { transform: translate(7%, 15px) rotate(-7deg); z-index: 1; }
+.youth-device-today { transform: scale(1.12) translateY(-12px); z-index: 3; }
+.youth-device-coach { transform: translate(-7%, 15px) rotate(7deg); z-index: 2; }
+.youth-device figcaption { text-align: center; color: var(--muted); font-size: .72rem; font-weight: 800; margin-top: 14px; }
+@media (max-width: 980px) {
+  .youth-grid { grid-template-columns: 1fr; }
+  .youth-visuals { max-width: 560px; }
+}
+@media (max-width: 700px) {
+  .youth-visuals { grid-template-columns: repeat(3, minmax(0,1fr)); padding: 28px 0; }
+  .youth-device .phone { padding: 4px; border-radius: 16px; }
+  .youth-device .app-shot { inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); border-radius: 12px; }
+  .youth-device figcaption { font-size: .6rem; margin-top: 10px; }
+}
