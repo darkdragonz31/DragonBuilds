@@ -1,7 +1,5 @@
 Dragon's Rhythm beta website update — October 5, 2026
 
-Upload the updated docs folder into the existing DragonBuilds repository and publish through the existing GitHub Pages workflow. No npm install, build step, or new hosting provider is needed.
-
 Updated files:
 - docs/index.html (Dragon's Rhythm card and clearly named beta links)
 - docs/dragonsrhythm/index.html (beta landing page and social metadata)
